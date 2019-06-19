@@ -510,10 +510,12 @@ class Model
     public function getClassName()
     {
         if ($this->shouldLowerCaseTableName()) {
-            return Str::studly(Str::lower($this->getRecordName()));
+            $name = Str::studly(Str::lower($this->getRecordName()));
         }
-
-        return Str::studly($this->getRecordName());
+        else{
+            $name = Str::studly($this->getRecordName());
+        }
+        return $name. "Model";
     }
 
     /**
