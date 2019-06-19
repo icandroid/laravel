@@ -482,7 +482,7 @@ class Factory
             $this->files->makeDirectory($modelsDirectory, 0755, true);
         }
 
-        return $this->path([$modelsDirectory, $model->getClassName().'Model.php']);
+        return $this->path([$modelsDirectory, $model->getClassName().'.php']);
     }
 
     /**
