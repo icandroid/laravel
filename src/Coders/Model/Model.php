@@ -515,7 +515,7 @@ class Model
         else{
             $name = Str::studly($this->getRecordName());
         }
-        return $name. "Model";
+        return $name . $this->config('class_suffix','');
     }
 
     /**
